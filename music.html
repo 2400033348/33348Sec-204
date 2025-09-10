@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+    
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if(username === "user" && password === "pass") {
+                window.location.href = "songs.html";
+            } else {
+                alert("Invalid Credentials");
+            }
+        }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vibes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1DB954;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px;
+        }
+        .song {
+            background: #333;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        button {
+            background: #1DB954;
+            border: none;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>Music Vibes</header>
+    <div class="container">
+        <div class="song">
+            <h3>Song Title 1</h3>
+            <p>Artist: Artist Name</p>
+		<img src="kl.html.jpg";"width=100";"height=50">
+
+            <button onclick="playSong('song1.mp3')">Play</button>
+        </div>
+        <div class="song">
+            <h3>Song Title 2</h3>
+            <p>Artist: Artist Name</p>
+            <button onclick="playSong('song2.mp3')">Play</button>
+        </div>
+    </div>
+    <audio id="audioPlayer" controls hidden></audio>
+    <script>
+        function playSong(songFile) {
+            var audio = document.getElementById('audioPlayer');
+            audio.src = songFile;
+            audio.play();
+        }
+    </script>
+</body>
+</html>

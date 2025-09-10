@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> My First Login Page </title>
+        <link rel="stylesheet" href="ex2.css">
+    <style>
+        body {
+            background-image: url('bg.html.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+        <script>
+           function fun1 () {
+            var a = document.getElementById("un").value;
+            var b = document.getElementById("pw").value;
+            alert(a + " --- " + b);
+            document.getElementById("new").innerHTML = "Button Clicked";
+           } 
+        </script>
+    </head>
+    <body background:"Globe_High.png">
+
+<fieldset>
+        <center>
+            <div id = "div1">
+		<img src="kl.html.jpg";"width=100";"height=50">
+                <p style="text-shadow: 1px 2px 4px yellow, -2px -2px 4px rgb(21, 102, 10);"><b><i><u> Login Box </u></i></b></p>
+</style>
+                <br/>
+                <br/>
+                username: <input type="text" id="un" />
+                <br/>
+<br/>
+                password: <input type="password" id="pw" />
+                <br/>
+                <br/>
+                <button onclick="fun1()"> Login </button>
+                <div id = "new">  </div>
+            </center>
+<fieldset>
+        </div>
+    </body>
+</html>

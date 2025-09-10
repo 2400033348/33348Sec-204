@@ -1,0 +1,47 @@
+<!DOCTYPEHTML>
+<html>
+<head>
+</head>
+<body>
+<h1> simple callculator</h1>
+<form>
+<table>
+<tr>
+<td>enter number-1</td>
+<td><input type="text" id="num1"></td>
+</tr>
+<tr>
+<td>enter number-2</td>
+<td><input type="text" id="num2"></td>
+</tr>
+<tr>
+<td> <button type="button" onclick="add()">add</button></td>
+<td><button type="button" onclick="sub()">sub</button></td>
+</tr>
+</table>
+</form>
+<div id="result"></div>
+<script>
+function getInputValues(){
+const n1=parsefloat(document.getE1ementById('num1').value);
+const n2=parsefloat(document.getlemetById('num2').value);
+return [n1,n2]
+}
+function add(){
+const n1,n2;
+[n1,n2]=getInputValues();
+if(isNaN(n1)||isNaN(n2)){
+document.getElementById('result').innerHTML="<b>Invalid input,Enter the correct Input</b>"
+return;
+}
+const sum=n1+n2;
+document.getElementById('return').innerHTML=`The Sum is ${sum}`;
+}
+function multiply(){
+const [n1,n2] = getInputValues();
+if(isNaN(n1)||isNaN(n2)){
+document.getElementById('result').innerHTML="<b>Invalid input,Enter the correct Input</b>"
+return;
+}
+const product = n1*n2;
+document.getElementById('result').innerHTML=`The product is ${product}`; 
