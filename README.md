@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title> My First HTML Page </title>
@@ -30,4 +29,3 @@
         </div>
     </body>
 </html>
-
